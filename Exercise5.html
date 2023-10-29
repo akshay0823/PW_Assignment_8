@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 5 Z-index</title>
+  </head>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+      margin: 5px;
+      text-align: center;
+    }
+    #box1 {
+      position: relative;
+      background-color: red;
+      z-index: 1;
+    }
+    #box2 {
+      position: absolute;
+      background-color: aqua;
+      top: -1px;
+    }
+    #box2:hover {
+      z-index: 2;
+    }
+  </style>
+  <body>
+    <h3>Q) Explain the Z-index with Code</h3>
+    <p>
+      <strong>Ans: </strong>z-index property in CSS controls the stacking order
+      of elements on a web page. Elements with higher z-index values appear in
+      front of elements with lower values. It only works on positioned elements
+      (with position: relative, position: absolute, or position: fixed).
+      Elements in the same stacking context are compared based on their z-index
+      values to determine their display order.
+    </p>
+    <div class="container">
+      <div class="box" id="box1">A</div>
+      <div class="box" id="box2">B</div>
+    </div>
+  </body>
+</html>
